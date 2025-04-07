@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <title>CSS Conceitos</title>
+    <style>
+      /* Regras aqui serão aplicadas somente a esta pagina. */
+      /* Regras para serem aplicadas a mais de uma pagina devem ficar em um arquivo CSS */
+    </style>
+  </head>
+  <body>
+    <!-- TAG SEM SEMANTICA -->
+    <div id="primeira-div">tag generica</div>
+    <span>tag generica</span>
+
+    <!-- FORMULARIO -->
+    <form action="#" method="#">
+      <div class="campos">
+        <!-- CAIXA DE TEXTO -->
+        <label for="">Nome</label>
+        <input type="text" name="" id="" />
+      </div>
+      <div class="campos">
+        <!-- CAIXA DE SENHA - NÃO MOSTRA OS CARACTERES -->
+        <label for="">Senha</label>
+        <input type="password" name="" id="" />
+      </div>
+      <div class="campos">
+        <label for="">Curso</label>
+        <!-- CAIXA DE SELECAO -->
+        <select name="" id="">
+          <option value="1">Tecnico</option>
+          <option value="2">Graduação</option>
+          <option value="3">Pos-Graduação</option>
+        </select>
+      </div>
+      <!-- CHECKBOX -->
+      <div class="campos">
+        <input type="checkbox" name="" id="" />
+        <label for="">Texto</label>
+      </div>
+      <div class="campos">
+        <input type="checkbox" name="" id="" />
+        <label for="">Texto</label>
+      </div>
+      <div class="campos">
+        <input type="checkbox" name="" id="" />
+        <label for="">Texto</label>
+      </div>
+      <!-- RADIO -->
+      <div class="campos">
+        <input type="radio" name="bebida" id="" />
+        <label for="">Coca cola comum</label>
+      </div>
+      <div class="campos">
+        <input type="radio" name="bebida" id="" />
+        <label for="">Coca cola zero</label>
+      </div>
+      <!-- BOTOES DE ENVIO E RESET -->
+      <input type="submit" value="Enviar" />
+      <input type="reset" value="Limpar" />
+    </form>
+  </body>
+</html>
