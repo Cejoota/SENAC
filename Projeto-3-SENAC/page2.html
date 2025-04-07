@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="shortcut icon"
+      href="./images/icon-carrefour.png"
+      type="image/png"
+    />
+    <title>Projeto 3 - Mercado</title>
+  </head>
+  <body>
+    <style>
+      .list-img1 {
+        list-style-type: none;
+        display: inline-block;
+        margin: 5px;
+      }
+
+      .list-img1:hover {
+        cursor: pointer;
+      }
+
+      .sec-img1,
+      .sec-img2,
+      .sec-img3,
+      .sec-img4 {
+        width: 80px;
+        border: 1px solid rgba(0, 0, 0, 0.266);
+        border-radius: 10px;
+      }
+
+      .radio {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(-100%, -100%);
+      }
+
+      label {
+        cursor: pointer;
+        margin: 1px;
+      }
+
+      #img1:checked + .lb1 .sec-img1 {
+        border: 1px solid red;
+      }
+
+      #img2:checked + .lb2 .sec-img2 {
+        border: 1px solid red;
+      }
+
+      #img3:checked + .lb3 .sec-img3 {
+        border: 1px solid red;
+      }
+
+      #img4:checked + .lb4 .sec-img4 {
+        border: 1px solid red;
+      }
+
+      .teste1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style-type: none;
+        margin: 0 auto;
+      }
+
+      .imgteste1, .imgteste2, .imgteste3, .imgteste4{
+        display: none;
+        width: 340px;
+      }
+
+      .sec-main {
+        display: flex;
+        margin: 20px auto;
+        border: 1px solid black;
+        background-color: white;
+        flex-flow: column wrap;
+        height: 350px;
+      }
+
+      .sec-main2 {
+        display: flex;
+      }
+
+      .sec-principal1 {
+        width: 300px;
+        border-radius: 10px;
+      }
+
+      .div-img1 {
+        display: flex;
+      }
+
+      .div-sec-main {
+        display: flex;
+        justify-content: flex-end;
+        margin: auto 120px;
+      }
+
+      .art-main {
+        width: 730px;
+        margin: 25px auto;
+        padding: 5px;
+        text-align: justify;
+        background-color: white;
+        border: 1px solid #cccccc6a;
+        border-radius: 3px;
+        box-shadow: 1px 1px 2px #cccccc86, -1px -1px 2px #cccccc86;
+      }
+
+      .par-art1 {
+        margin-left: 33px;
+        text-align: left;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .preco-art1 {
+        margin: 10px auto;
+        text-align: left;
+        font-size: 20px;
+        font-weight: bold;
+        color: green;
+        margin-left: 33px;
+      }
+
+      .subpreco-art1 {
+        margin: 10px auto;
+        text-align: left;
+        font-size: 15px;
+        margin-left: 33px;
+        font-weight: 500;
+      }
+
+      .h3-art1 {
+        margin: 15px auto;
+        text-align: left;
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 33px;
+      }
+
+      .description-art1 {
+        margin: 10px auto;
+        text-align: left;
+        font-size: 13px;
+        margin-left: 33px;
+      }
+
+      button {
+        margin: 30px auto;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        margin-left: 33px;
+        padding: 10px 30px;
+        border-radius: 10px;
+        background-color: #1e5bc6;
+        color: white;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #1e5cc6d1;
+      }
+
+      iframe {
+        display: block;
+        margin: 60px auto;
+      }
+    </style>
+    <header>
+      <div class="pesquisa">
+        <a href="./index.html"
+          ><img
+            class="logo-carrefour"
+            src="./images/logo-carrefour.png"
+            alt="logo-carrefour"
+          />
+        </a>
+        <input type="search" placeholder="Pesquise por produtos ou marcas" />
+        <img
+          class="search-icon"
+          src="./images/search-icon.png"
+          alt="icone de pesquisa"
+        />
+      </div>
+      <div>
+        <nav>
+          <ul class="ul-nav-phone">
+            <li><a href="#">Drogaria</a></li>
+            <li><a href="#">Churrasco</a></li>
+            <li><a href="#">Bebidas</a></li>
+            <li><a href="#">Praticidade</a></li>
+            <li><a href="#">Receitas</a></li>
+            <li><a href="#">Saudáveis</a></li>
+            <li><a href="#">Perfumaria</a></li>
+            <li><a href="#">Limpeza</a></li>
+            <li><a href="#">Infantil</a></li>
+            <li><a href="#">Horti-fruti</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="sec-main">
+        <input
+          class="radio"
+          type="radio"
+          name="radio"
+          id="img1"
+          checked="checked"
+        />
+        <label class="lb1" for="img1">
+          <img
+            id="img1"
+            class="sec-img1"
+            src="./images/small-aromatizador1.webp"
+            alt=""
+          />
+        </label>
+        <input class="radio" type="radio" name="radio" id="img2" />
+        <label class="lb2" for="img2">
+          <img
+            id="img2"
+            class="sec-img2"
+            src="./images/small-aromatizador2.webp"
+            alt=""
+          />
+        </label>
+        <input class="radio" type="radio" name="radio" id="img3" />
+        <label class="lb3" for="img3">
+          <img
+            id="img3"
+            class="sec-img3"
+            src="./images/small-aromatizador3.webp"
+            alt=""
+          />
+        </label>
+        <input class="radio" type="radio" name="radio" id="img4" />
+        <label class="lb4" for="img4">
+          <img
+            id="img4"
+            class="sec-img4"
+            src="./images/small-aromatizador4.webp"
+            alt=""
+          />
+        </label>
+        <img class="imgteste1" src="./images/small-aromatizador1.webp" alt="" />
+        <img class="imgteste2" src="./images/small-aromatizador2.webp" alt="" />
+        <img class="imgteste3" src="./images/small-aromatizador3.webp" alt="" />
+        <img class="imgteste4" src="./images/small-aromatizador4.webp" alt="" />      
+      <section class="article-main">
+        <article class="art-main">
+          <p class="par-art1">
+            Aromatizador Bom Ar Freshmatic Aerossol Cheirinho de Talco 360ml
+          </p>
+          <p class="preco-art1">R$ 12,00</p>
+          <p class="subpreco-art1">Em até 10x de R$ 1,20</p>
+          <h3 class="h3-art1">Descrição do Produto</h3>
+          <p class="description-art1">
+            Bom Ar Cheirinho de Talco foi especialmente formulado com uma
+            delicada e exclusiva fragrância que age em poucos segundos e perfuma
+            suavemente o ar da sua casa, criando um ambiente agradável e
+            acolhedor.
+          </p>
+          <button>Comprar</button>
+        </article>
+      </section>
+    </section>
+    </main>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/l2EtsOOxKD4?si=9mWMQXmZeztB03aU"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    <footer>
+      Todos os direitos reservados ao Hipermercado Carrefour &copy
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/main.css" />
+    <title>CJ E-Commerce</title>
+  </head>
+  <body>
+    <style>
+      /* BODY */
+      body {
+        background-color: #d8e0b7;
+      }
+      /* BODY */
+
+      /* SECTION */
+      section {
+        display: inline-flex;
+        flex-direction: column;
+        background-color: #d8e0b7;
+        height: 840px; /* altura */
+        width: 1150px; /* largura */
+        margin: 0 0 0 400px;
+      }
+      /* SECTION */
+
+      /* MAIN */
+      main {
+        background-color: white;
+        display: inline-flex;
+        flex-direction: column;
+      }
+
+      .img1 {
+        display: inline-flex;
+        flex-direction: row;
+        background-color: #d8e0b7;
+      }
+      .pic1 {
+        height: 600px;
+        transition: opacity 1s ease-in-out;
+        position: relative;
+        top: 110px;
+      }
+
+      .pic2 {
+        display: none;
+        position: absolute;
+        height: 600px;
+      }
+
+      .pic3 {
+        display: none;
+        position: absolute;
+        height: 600px;
+        top: 192px;
+      }
+
+      .container-text {
+        position: relative;
+        top: 110px;
+        right: 35px;
+        background-color: white;
+      }
+
+      .roupa {
+        display: inline-flex;
+        flex-direction: column;
+      }
+
+      .titulo {
+        font-size: 40px;
+        margin: 40px 0 5px 40px;
+      }
+
+      .preco {
+        font-size: 30px;
+        margin: 0 0 5px 40px;
+        color: rgb(73, 73, 73);
+      }
+
+      .desc {
+        font-size: 20px;
+        margin: 0 0 15px 40px;
+        color: rgb(79, 192, 89);
+      }
+
+      .review {
+        font-size: 18px;
+        margin: 50px 0 0 40px;
+        color: gray;
+        width: fit-content;
+      }
+
+      .tam {
+        display: inline-flex;
+        flex-direction: row;
+        list-style-type: none;
+        color: gray;
+      }
+
+      .size,
+      .color {
+        font-size: 20px;
+        margin: 50px 0 0 40px;
+      }
+
+      .l1 {
+        list-style-type: none;
+        display: inline-flex;
+        flex-direction: row;
+        height: fit-content;
+        margin: 55px 0 0 40px;
+        gap: 15px;
+      }
+
+      a {
+        color: gray;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: blue;
+      }
+
+      .content3 {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: baseline;
+      }
+
+      .cor {
+        display: inline flex;
+      }
+
+      .color {
+        flex-direction: row;
+        margin: 30px 0 0 40px;
+        color: gray;
+      }
+
+      .lista2 {
+        display: inline;
+        margin-left: 90px;
+      }
+
+      .l2 {
+        display: inline-block;
+        list-style-type: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        margin: 5px;
+      }
+
+      .l2.black {
+        background-color: black;
+      }
+
+      .l2.red {
+        background-color: red;
+      }
+
+      .l2.blue {
+        background-color: blue;
+      }
+
+      .l2.lightpink {
+        background-color: lightpink;
+      }
+
+      .qtd {
+        display: block;
+      }
+
+      .quanti {
+        display: inline-block;
+        margin: 0 0 0 40px;
+        color: gray;
+      }
+
+      input {
+        text-align: center;
+        border-radius: 50px;
+        width: 40px;
+        background-color: rgb(232, 232, 233);
+        border: none;
+        margin-left: 15px;
+      }
+      /* MAIN */
+
+      /* BUTTON */
+      button {
+        border-radius: 50px;
+        padding: 5px 10px;
+        background-color: rgb(172, 121, 219);
+        color: white;
+        margin: 80px 0 0 150px;
+        height: 50px;
+        width: 300px;
+        font-size: 30px;
+        border: none;
+        cursor: pointer;
+      }
+
+      /* BUTTON */
+
+      /* CHECKBOX */
+
+      #img1,
+      #img2 {
+        height: fit-content;
+        display: block;
+      }
+
+      #img1:checked + .pic2 {
+        display: block;
+      }
+
+      #img1:checked ~ .pic1 {
+        display: none;
+      }
+
+      #img2:checked + .pic3 {
+        display: block;
+      }
+
+      #img2:checked ~ .pic3 {
+        display: block;
+      }
+
+      #img1,
+      #img2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-100%, -100%);
+        z-index: -1;
+      }
+
+      /* CHECKBOX */
+
+      /* LABEL */
+
+      .lb1 {
+        display: block;
+        width: 40px;
+        height: 15px;
+        border-radius: 100%;
+        border: 1px solid gray;
+        cursor: pointer;
+        background-color: gray;
+        z-index: 3;
+      }
+
+      .lb2 {
+        display: block;
+        width: 37px;
+        height: 15px;
+        border-radius: 100%;
+        border: 1px solid gray;
+        cursor: pointer;
+        background-color: gray;
+        z-index: 3;
+      }
+
+      .lb1 {
+        position: relative;
+        top: 600px;
+        right: 31px;
+      }
+
+      .lb2 {
+        position: relative;
+        top: 625px;
+        right: 46px;
+      }
+
+      .rad1:checked ~ .lb1 {
+        background-color: rgb(172, 121, 219);
+      }
+      .rad2:checked ~ .lb2 {
+        background-color: rgb(172, 121, 219);
+      }
+
+      /* LABEL */
+    </style>
+    <header>
+      <div class="container">
+        <div class="e-name">
+          <img class="logo" src="/images/CJ CLOTHING.jpg" alt="logo" />
+          <h1 class="site-name">C.J Clothing</h1>
+          <div class="login">
+            <ul class="list-login">
+              <img
+                class="login-icon"
+                src="../images/Assets/login_icon.png"
+                alt="icone de login"
+              />
+              <a class="img-header" href=""
+                ><li class="login-item">LOGIN</li></a
+              >
+              <img
+                class="register-icon"
+                src="../images/Assets/register-login.png"
+                alt="icone de registro"
+              />
+              <a class="img-header" href=""
+                ><li class="register-item">REGISTRE-SE</li></a
+              >
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="img1">
+        <img
+          class="pic1"
+          src="../images/Third-page/1.webp"
+          alt="homem com camiseta preta"
+        />
+        <input
+          type="radio"
+          id="img1"
+          class="rad1"
+          name="check1"
+          checked="checked"
+        />
+        <label for="img1" class="lb1 label"></label>
+        <input type="radio" id="img2" class="rad2" name="check1" />
+        <label for="img2" class="lb2 label"></label>
+        <img
+          class="pic3"
+          src="../images/Third-page/3.webp"
+          alt="homem com camiseta preta"
+        />
+        <div class="container-text">
+          <main class="roupa">
+            <h2 class="titulo">Camiseta Básica Preta</h2>
+            <h3 class="preco">R$15,00</h3>
+            <h3 class="desc">30% OFF</h3>
+            <p class="review">
+              Camiseta básica masculina, de modelo comfort, confeccionada em
+              algodão peruano, com mangas curtas e gola redonda.
+            </p>
+          </main>
+          <main class="tam">
+            <h3 class="size">Tamanho</h3>
+            <ul class="l1">
+              <a class="t1" href="#"><li>P</li></a>
+              <a class="t1" href="#"><li>M</li></a>
+              <a class="t1" href="#"><li>G</li></a>
+              <a class="t1" href="#"><li>XG</li></a>
+              <a class="t1" href="#"><li>XXG</li></a>
+            </ul>
+          </main>
+          <main class="color">
+            <h3 class="cor">Cor</h3>
+            <ul class="lista2">
+              <li class="l2 black"></li>
+              <li class="l2 red"></li>
+              <li class="l2 blue"></li>
+              <li class="l2 lightpink"></li>
+            </ul>
+          </main>
+          <main class="qtd">
+            <h3 class="quanti">Quantidade</h3>
+            <input type="text" value="1" />
+          </main>
+          <button>Compre Agora</button>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p class="footer-paragraph">
+        Rua do Estilo Despojado, 123 - Bairro da Moda Alternativa, Cidade Casual
+      </p>
+      <p class="footer-paragraph2">Todos os direitos reservados &reg</p>
+    </footer>
+  </body>
+</html>

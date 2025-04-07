@@ -1,0 +1,152 @@
+:root {
+  --back-gray: #ccc;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu Sans", sans-serif;
+}
+
+body {
+  min-width: 300px;
+  max-width: 1500px;
+  margin: 0 auto;
+  background-color: #1e5bc6;
+}
+
+header {
+  width: 100%;
+  align-items: center;
+  background-color: white;
+}
+
+.logo-carrefour {
+  position: relative;
+  top: 5px;
+  left: 25px;
+}
+
+.pesquisa {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+input {
+  width: 60%;
+  /* margin-right: 150px; */
+  margin-top: 10px;
+  padding: 10px;
+}
+
+input::placeholder {
+  margin-left: 10px;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 20px;
+  right: 235px;
+}
+
+nav ul {
+  background-color: var(--back-gray);
+  margin-top: 20px;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 20px;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+nav ul li a:hover {
+  color: white;
+  background-color: #1e5bc6;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 75%;
+  background-color: var(--back-gray);
+  color: black;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  max-width: 1500px;
+  width: 100%;
+}
+
+@media screen and (min-width: 500px) and (max-width: 900px) {
+  .ul-nav-phone {
+    display: none;
+  }
+
+  .div-main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    display: none;
+  }
+
+  .search-icon {
+    display: none;
+  }
+}
+
+/* teste */
+
+.imgteste2, .imgteste3, .imgteste4 {
+  display: none;
+}
+
+#img1:checked ~ .imgteste1{
+  display: block;
+}
+
+#img2:checked + .imgteste1{
+  display: none;
+}
+
+#img2:checked ~ .imgteste2{
+  display: block;
+}
+
+#img3:checked + .imgteste2{
+  display: none;
+}
+
+#img3:checked ~ .imgteste3{
+  display: block;
+}
+
+#img4:checked + .imgteste3{
+  display: none;
+}
+
+#img4:checked ~ .imgteste4{
+  display: block;
+}
+
+.imgteste1, .imgteste2, .imgteste3, .imgteste4 {
+margin-top: 5px;
+}
+
