@@ -4,7 +4,7 @@
 
 .header{
     background-color: #E5F4FF;
-    height: 136px;
+    height: 20vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -21,3 +21,107 @@
 .header__title--blue{
     color: #1298F8;
 }
+
+/* /HEADER */
+
+/* MAIN */
+
+main{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../images/pizzaBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 350px 0;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 460px;
+    height: 260px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 25px;
+    background-color: #E5F4FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    left: 100px;
+}
+
+.form__control{
+    width: 280px;
+    height: 24px;
+}
+
+.form__btn{
+    border-radius: 20px;
+    padding: 16px 32px;
+    background-color: #399ADE;
+    color: #fff;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form__btn--action{
+    background-color: #48D05F;
+}
+
+/* /MAIN */
+
+/* FOOTER */
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 194px;
+    background-color: #E5F4FF;
+    width: 100vw;
+    height: 20vh;
+}
+
+.footer__address{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    margin-left: 40px;
+}
+
+.footer__social{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 25px;
+    font-weight: 600;
+}
+
+.footer__social-text{
+    text-align: center;
+}
+
+.footer__social-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.footer__social-icon{
+    width: 15px;
+    margin: 7px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+}
+
+.footer__copy{
+    display: flex;
+    font-weight: 600;
+    margin: 20px;
+}
+
+/* /FOOTER */
