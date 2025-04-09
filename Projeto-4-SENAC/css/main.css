@@ -24,7 +24,6 @@
 
 /* /HEADER */
 
-<<<<<<< HEAD
 /* MAIN */
 
 main{
@@ -72,33 +71,16 @@ main{
 
 /* /MAIN */
 
-=======
->>>>>>> 6dfd94153e5cc8afddb39e33c474df0ce19febfe
 /* FOOTER */
 
 .footer{
     display: flex;
-<<<<<<< HEAD
     justify-content: space-between;
     align-items: center;
     gap: 194px;
     background-color: #E5F4FF;
     width: 100vw;
     height: 20vh;
-=======
-    gap: 194px;
-    background-color: #E5F4FF;
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    height: 115px;
-}
-
-.footer__column{
-    width: 50%;
-    font-size: 15px;
-    margin-left: 200px;
->>>>>>> 6dfd94153e5cc8afddb39e33c474df0ce19febfe
 }
 
 .footer__address{
