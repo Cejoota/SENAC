@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap");
+:root {
+  --cor-primaria: #982417;
+  --cor-font1: #fff0d1;
+  --cor-font2: #c7ab72;
+}
+
+.header {
+  background-color: var(--cor-primaria);
+  height: 176px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.cofee-icon {
+  color: var(--cor-font1);
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.header__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Just Me Again Down Here", cursive;
+  font-size: 80px;
+  color: var(--cor-font1);
+}
+
+.header__span {
+  color: var(--cor-font2);
+}
+
+.header__nav {
+  display: flex;
+  font-family: "Just Me Again Down Here", cursive;
+  font-size: 40px;
+  color: var(--cor-font1);
+  position: relative;
+  bottom: -9px;
+}
+
+.header__nav-list {
+  display: flex;
+  list-style: none;
+  gap: 16px;
+}
+
+.beneficios {
+  color: var(--cor-font1);
+  border-bottom: 4px solid var(--cor-font1);
+}
+.header__nav-link {
+  text-decoration: none;
+  color: var(--cor-font1);
+  padding: 10px;
+}
