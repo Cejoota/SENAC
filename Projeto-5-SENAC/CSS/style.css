@@ -5,6 +5,8 @@
   --cor-font2: #c7ab72;
 }
 
+/* HEADER */
+
 .header {
   background-color: var(--cor-primaria);
   height: 176px;
@@ -61,3 +63,18 @@
   color: var(--cor-font1);
   padding: 10px;
 }
+
+/* /HEADER */
+
+/* BANNER */
+
+.banner__container {
+width: 100vw;
+height: 528px;
+}
+
+.banner--img{
+    width: 500px;
+}
+
+/* /BANNER */
