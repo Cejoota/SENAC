@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
 :root{
-    --cor-primaria: #aadcff;
-    --cor-secundaria: #1298f8;
+    --cor-primaria: #F6ECD1;
+    --cor-secundaria: #FC9A1B;
     --cor-action: #48D05F;
 }
 
@@ -14,19 +17,32 @@
     height: 20vh;
     width: 100vw;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    gap: 20%;
+}
+
+.header__logo{
+    display: flex;
+    align-items: center;
+    padding-left: 17%;
+}
+
+.header__logo-img{
+    width: 100px;
 }
 
 .header__title{
-    font-weight: bold;
+    font-weight: 500;
     color: #000000;
-    font-family: "inter", sans-serif;
-    font-size: 48px;
+    font-family: "jockey one", sans-serif;
+    font-size: 58px;
 }
 
 .header__title--blue{
     color: var(--cor-secundaria);
+    font-family: 'italiana', sans-serif;
+    font-size: 58px;
 }
 
 /* /HEADER */
@@ -73,7 +89,7 @@ main{
 .form__btn{
     border-radius: 20px;
     padding: 16px 32px;
-    background-color: #399ADE;
+    background-color: var(--cor-secundaria);
     color: #fff;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -81,7 +97,7 @@ main{
 
 .form__btn:hover{
     cursor: pointer;
-    background-color: #127cc7;
+    background-color: #a07500;
     color: #000000;
 }
 
