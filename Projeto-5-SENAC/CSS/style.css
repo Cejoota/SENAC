@@ -140,3 +140,53 @@
 }
 
 /* /BANNER */
+
+/* BENEFICIOS */
+
+.beneficios__container {
+  background-color: #fff0d1;
+  display: flex;
+  height: 360px;
+}
+
+.beneficios__header {
+  display: flex;
+  width: 100%;
+}
+
+.beneficios__title {
+  display: flex;
+  color: var(--cor-primaria);
+  font-family: "lekton", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  border-left: 10px solid var(--cor-primaria);
+  margin: 16px;
+}
+
+.beneficios__group {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+.beneficios__group-container {
+  display: flex;
+  background-color: white;
+  text-align: center;
+  width: 300px;
+  height: 249px;
+}
+
+.beneficios__group-item {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 32px 16px;
+  gap: 16px;
+}
+
+/* /BENEFICIOS */
