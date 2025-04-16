@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 :root {
   --cor-primaria: #982417;
   --cor-font1: #fff0d1;
@@ -69,12 +71,72 @@
 /* BANNER */
 
 .banner__container {
-width: 100vw;
-height: 528px;
+  background-image: url(../Images/Banner1.jfif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: -520px;
+  height: 528px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.banner--img{
-    width: 500px;
+.container-text {
+  display: inline-flex;
+  flex-direction: column;
+  background-color: white;
+  height: 237px;
+  width: 589px;
+  padding: 32px 48px 0 16px;
+  gap: 26px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.container-title {
+  font-family: "Lekton", sans-serif;
+  font-size: 40px;
+  padding: 10px;
+  font-weight: bold;
+  text-align: right;
+}
+.container-p {
+  font-family: "inria sans", sans-serif;
+  font-size: 28px;
+  padding: 10px;
+  text-align: right;
+  font-weight: 400;
+}
+
+.container-span {
+  color: var(--cor-primaria);
+  font-weight: 400;
+  font-size: 28px;
+  text-align: right;
+}
+
+.container__button {
+  display: inline-block;
+  text-align: right;
+}
+
+.container__button--saber {
+  padding: 8px 16px;
+  margin: 10px;
+  font-family: "inria sans", sans-serif;
+  font-size: 16px;
+  border: 1px solid #ff9c2d;
+  border-radius: 6px;
+  background-color: transparent;
+}
+
+.container__button--interesse {
+  padding: 8px 16px;
+  margin: 10px;
+  font-family: "inria sans", sans-serif;
+  font-size: 16px;
+  border: 1px solid #ff9c2d;
+  border-radius: 6px;
+  background-color: #ff9c2d;
 }
 
 /* /BANNER */
