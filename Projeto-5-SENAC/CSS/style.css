@@ -414,9 +414,59 @@ body {
   font-size: 1.5rem;
 }
 
-.link-icon{
+.link-icon {
   text-decoration: none;
   color: var(--cor-font1);
 }
 
 /* /FOOTER */
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 360px) {
+  .beneficios__container {
+    height: auto;
+  }
+
+.beneficios__title{
+  font-size: 1.3rem;
+  border: none;
+}
+
+  .beneficios__group-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .depoimentos {
+    height: auto;
+  }
+
+  .depoimentos__container{
+    margin-bottom: 2rem;
+  }
+
+  .depoimentos--img {
+    display: none;
+  }
+
+  .modelo-negocio{
+    height: auto;
+
+  }
+
+  .modelo-negocio__container{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer{
+    height: auto;
+  }
+}
+
+/* /MEDIA QUERIES */
