@@ -7,7 +7,7 @@
   --cor-font2: #c7ab72;
 }
 
-body{
+body {
   font-size: 62.5%;
 }
 
@@ -89,7 +89,6 @@ body{
   display: inline-flex;
   flex-direction: column;
   background-color: white;
-  height: 35%;
   width: 25%;
   padding: 20px 48px 20px 16px;
   gap: 15px;
@@ -166,10 +165,10 @@ body{
   font-weight: 700;
   border-left: 10px solid var(--cor-primaria);
   margin: 16px;
+  padding-left: 0.3rem;
 }
 
 .beneficios__group {
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -186,6 +185,7 @@ body{
   border: 1px solid black;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
   background-color: white;
   padding: 32px 16px;
@@ -193,21 +193,97 @@ body{
   height: 12rem;
 }
 
-.beneficios--icon{
+.beneficios--icon {
   font-size: 3.5rem;
+  border: 1px solid #ff9c2d;
+  max-width: fit-content;
+  padding: 0.3rem;
 }
 
-.beneficios__group--first-title{
+.beneficios__group--first-title {
   font-size: 0.9rem;
-  font-family: 'inria sans', sans-serif;
+  font-family: "inria sans", sans-serif;
   color: var(--cor-primaria);
   font-weight: 700;
 }
 
-.beneficios__group--second-title{
+.beneficios__group--second-title {
   font-size: 0.9rem;
-  font-family: 'inria sans', sans-serif;
+  font-family: "inria sans", sans-serif;
   font-weight: 400;
 }
 
 /* /BENEFICIOS */
+
+/* DEPOIMENTOS */
+
+.depoimentos {
+  color: white;
+  background-color: black;
+  height: 595px;
+}
+
+.deposimentos__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+.depoimentos__header {
+  display: flex;
+  width: 95%;
+}
+
+.depoimentos__title {
+  display: flex;
+  font-family: "lekton", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  border-left: 10px solid white;
+  margin: 16px;
+  padding-left: 0.3rem;
+}
+
+.depoimentos__container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.depoimentos__text {
+  width: 52%;
+  font-size: 1.3rem;
+  font-weight: 300;
+  font-family: "inria sans", sans-serif;
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.depoimentos__name {
+  font-family: "lekton", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.depoimentos__local {
+  font-family: "inria sans", sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.depoimentos__img {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10rem;
+}
+
+.depoimentos--img {
+  width: 18rem;
+  height: 26rem;
+  border: 1px solid white;
+  padding: 25px;
+}
+
+/* /DEPOIMENTOS */
