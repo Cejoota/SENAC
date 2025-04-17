@@ -9,6 +9,7 @@
 
 body {
   font-size: 62.5%;
+  min-width: 340px;
 }
 
 /* HEADER */
@@ -130,6 +131,7 @@ body {
   border: 1px solid #ff9c2d;
   border-radius: 6px;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .container__button--interesse {
@@ -140,6 +142,7 @@ body {
   border: 1px solid #ff9c2d;
   border-radius: 6px;
   background-color: #ff9c2d;
+  cursor: pointer;
 }
 
 /* /BANNER */
@@ -292,13 +295,12 @@ body {
 
 .modelo-negocio {
   background-color: white;
-  height: 668px;
+  height: 34rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100vw;
 }
-
 
 .modelo-negocio__header {
   display: flex;
@@ -323,32 +325,32 @@ body {
   gap: 15rem;
 }
 
-.modelo-negocio__bistro{
+.modelo-negocio__bistro {
   display: flex;
   flex-direction: column;
 }
 
-.modelo-negocio__bistro--img{
+.modelo-negocio__bistro--img {
   width: 30rem;
 }
 
-.modelo-negocio--list{
+.modelo-negocio--list {
   display: flex;
   flex-direction: column;
   list-style-type: disc;
   list-style-position: inside;
 }
 
-.modelo-negocio--list-item{
+.modelo-negocio--list-item {
   font-size: 1rem;
-  font-family: 'lekton', sans-serif;
+  font-family: "lekton", sans-serif;
   font-weight: 600;
   padding: 0.6rem;
 }
 
-.modelo{
+.modelo {
   font-size: 1.7rem;
-  font-family: 'lekton', sans-serif;
+  font-family: "lekton", sans-serif;
   background-color: var(--cor-primaria);
   color: white;
   text-align: center;
@@ -356,13 +358,65 @@ body {
   padding: 0.9rem;
 }
 
-.modelo-negocio__quiosque{
+.modelo-negocio__quiosque {
   display: flex;
   flex-direction: column;
 }
 
-.modelo-negocio__quiosque--img{
+.modelo-negocio__quiosque--img {
   width: 27.9rem;
 }
 
 /* /MODELOS DE NEGÓCIOS */
+
+/* FOOTER */
+
+.footer {
+  background-color: var(--cor-primaria);
+  color: var(--cor-font1);
+  height: 6rem;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer__text {
+  font-family: "just me again down here", sans-serif;
+  font-size: 1.7rem;
+  padding: 0.7rem;
+}
+
+.footer__text-copy {
+  text-align: center;
+  font-family: "just me again down here", sans-serif;
+  font-size: 1.7rem;
+  padding: 0.7rem;
+}
+
+.footer__icon-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.footer__icon-phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: 10rem;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+}
+
+.link-icon{
+  text-decoration: none;
+  color: var(--cor-font1);
+}
+
+/* /FOOTER */
