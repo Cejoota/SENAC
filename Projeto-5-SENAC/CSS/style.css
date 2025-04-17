@@ -7,6 +7,10 @@
   --cor-font2: #c7ab72;
 }
 
+body{
+  font-size: 62.5%;
+}
+
 /* HEADER */
 
 .header {
@@ -74,7 +78,7 @@
   background-image: url(../Images/Banner1.jfif);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-y: -520px;
+  background-position-y: 75%;
   height: 528px;
   display: flex;
   justify-content: flex-end;
@@ -85,23 +89,23 @@
   display: inline-flex;
   flex-direction: column;
   background-color: white;
-  height: 237px;
-  width: 589px;
-  padding: 32px 48px 0 16px;
-  gap: 26px;
+  height: 35%;
+  width: 25%;
+  padding: 20px 48px 20px 16px;
+  gap: 15px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .container-title {
   font-family: "Lekton", sans-serif;
-  font-size: 40px;
+  font-size: 2.25rem;
   padding: 10px;
   font-weight: bold;
   text-align: right;
 }
 .container-p {
   font-family: "inria sans", sans-serif;
-  font-size: 28px;
+  font-size: 1.5rem;
   padding: 10px;
   text-align: right;
   font-weight: 400;
@@ -110,7 +114,7 @@
 .container-span {
   color: var(--cor-primaria);
   font-weight: 400;
-  font-size: 28px;
+  font-size: 1.5rem;
   text-align: right;
 }
 
@@ -151,7 +155,7 @@
 
 .beneficios__header {
   display: flex;
-  width: 100%;
+  width: 95%;
 }
 
 .beneficios__title {
@@ -174,10 +178,8 @@
 
 .beneficios__group-container {
   display: flex;
-  background-color: white;
   text-align: center;
-  width: 300px;
-  height: 249px;
+  gap: 10%;
 }
 
 .beneficios__group-item {
@@ -185,8 +187,27 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  background-color: white;
   padding: 32px 16px;
-  gap: 16px;
+  width: 22rem;
+  height: 12rem;
+}
+
+.beneficios--icon{
+  font-size: 3.5rem;
+}
+
+.beneficios__group--first-title{
+  font-size: 0.9rem;
+  font-family: 'inria sans', sans-serif;
+  color: var(--cor-primaria);
+  font-weight: 700;
+}
+
+.beneficios__group--second-title{
+  font-size: 0.9rem;
+  font-family: 'inria sans', sans-serif;
+  font-weight: 400;
 }
 
 /* /BENEFICIOS */
