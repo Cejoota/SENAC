@@ -440,6 +440,10 @@ body {
     margin-bottom: 2rem;
   }
 
+  .beneficios__group-item{
+    width: 16rem;
+  }
+
   .depoimentos {
     height: auto;
   }
@@ -460,8 +464,33 @@ body {
     margin-bottom: 2rem;
   }
 
+  .modelo-negocio__bistro--img, .modelo-negocio__quiosque--img{
+    width: 21rem;
+  }
+
+  .modelo{
+    width: 19.2rem;
+  }
+
+  .modelo-negocio--list-item{
+    font-size: 0.8rem;
+  }
+
   .footer{
     height: auto;
+  }
+
+  .footer__container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__text{
+    text-align: center;
+  }
+
+  .footer__icon-phone{
+    margin-left: 0;
   }
 }
 
