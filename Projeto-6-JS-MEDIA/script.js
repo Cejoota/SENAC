@@ -120,16 +120,20 @@
 function main(){
   let tabuada, contador, resultado;
   let nome;
+  let mensagem = "";
 
   nome = prompt("Qual o seu nome");
   tabuada = prompt(nome + ", qual tabuada você deseja resolver?")
+  tabuada = Number(tabuada);
 
   alert(nome + ", a tabuada do " + tabuada + " é:")
 
   for(contador = 0; contador <= 10; contador++){
     resultado = tabuada * contador;
-    alert(tabuada + " x " + contador + " = " + resultado);
+    mensagem += tabuada + " x " + contador + " = " + resultado + "\n";
   }
+
+  alert(mensagem);
 
 }
 
