@@ -123,14 +123,16 @@ function main(){
   let mensagem = "";
 
   nome = prompt("Qual o seu nome");
-  tabuada = prompt(nome + ", qual tabuada você deseja resolver?")
-  tabuada = Number(tabuada);
+  tabuada = Number(prompt(nome + ", qual tabuada você deseja resolver?"));
 
   alert(nome + ", a tabuada do " + tabuada + " é:")
 
   for(contador = 0; contador <= 10; contador++){
     resultado = tabuada * contador;
     mensagem += tabuada + " x " + contador + " = " + resultado + "\n";
+
+    // mensagem += `${tabuada} x ${contador} = ${resultado} \n`;  TEMPLATE STRING
+
   }
 
   alert(mensagem);
@@ -138,3 +140,32 @@ function main(){
 }
 
 main();
+
+// -----------------------------------------------------------------------------------------------------------------
+//Declarando Variaveis
+// WHILE
+
+// let tabuada, contador, resultado;
+// let saidaTabuada ="";
+ 
+// //Atribuindo valor a variavel (contador)
+// contador = 0;
+ 
+// //Entrada de dados
+// //Atribuindo valor a variavel (tabuada)
+// tabuada = Number(prompt("Qual a tabuada você deseja resolver?"));
+ 
+// //Enquanto contador for menor ou igual a 10 for verdade repetir se não falso
+// while (contador <= 10) {
+ 
+//     //Atribuindo valor a variavel resultado
+//     resultado = tabuada * contador;
+//     if (contador===0) {
+//         saidaTabuada = tabuada +"X"+ contador +"="+ resultado;
+//     } else {
+//         saidaTabuada = saidaTabuada +"\n" + tabuada +"X"+ contador +"="+ resultado;
+//     }
+//     contador = contador + 1;
+// }
+ 
+// alert(saidaTabuada);
