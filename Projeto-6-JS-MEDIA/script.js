@@ -117,29 +117,29 @@
 
 // TABUADA - 2.0
 
-function main(){
-  let tabuada, contador, resultado;
-  let nome;
-  let mensagem = "";
+// function main(){
+//   let tabuada, contador, resultado;
+//   let nome;
+//   let mensagem = "";
 
-  nome = prompt("Qual o seu nome");
-  tabuada = Number(prompt(nome + ", qual tabuada você deseja resolver?"));
+//   nome = prompt("Qual o seu nome");
+//   tabuada = Number(prompt(nome + ", qual tabuada você deseja resolver?"));
 
-  alert(nome + ", a tabuada do " + tabuada + " é:")
+//   alert(nome + ", a tabuada do " + tabuada + " é:")
 
-  for(contador = 0; contador <= 10; contador++){
-    resultado = tabuada * contador;
-    mensagem += tabuada + " x " + contador + " = " + resultado + "\n";
+//   for(contador = 0; contador <= 10; contador++){
+//     resultado = tabuada * contador;
+//     mensagem += tabuada + " x " + contador + " = " + resultado + "\n";
 
-    // mensagem += `${tabuada} x ${contador} = ${resultado} \n`;  TEMPLATE STRING
+//     // mensagem += `${tabuada} x ${contador} = ${resultado} \n`;  TEMPLATE STRING
 
-  }
+//   }
 
-  alert(mensagem);
+//   alert(mensagem);
 
-}
+// }
 
-main();
+// main();
 
 // -----------------------------------------------------------------------------------------------------------------
 //Declarando Variaveis
