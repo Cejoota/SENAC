@@ -104,35 +104,98 @@
 // Codigo prof
 
 //escopo global
- 
-function Tabuada(tabuadaUsuario){
-  //escopo específico
-  let contador, resultado, saidaTabuada;
 
-  while (contador <= 10) {    
-      resultado = tabuadaUsuario * contador;
-      if (contador === 0) {
-          saidaTabuada = tabuadaUsuario + "X" + contador + "=" + resultado;
-      } else {
-          saidaTabuada = `${saidaTabuada} \n ${tabuadaUsuario} X ${contador} = ${resultado}`; //Template String      
-      }
-      contador++;        
-  }    
-  return saidaTabuada;
-}
+// function Tabuada(tabuadaUsuario){
+//   //escopo específico
+//   let contador = 0, resultado, saidaTabuada = "";
 
+//   while (contador <= 10) {
+//       resultado = tabuadaUsuario * contador;
+//       if (contador === 0) {
+//           saidaTabuada = ` ${tabuadaUsuario} X ${contador} = ${resultado}`;
+//       } else {
+//           saidaTabuada = `${saidaTabuada} \n ${tabuadaUsuario} X ${contador} = ${resultado}`; //Template String
+//       }
+//       contador++;
+//   }
+//   return saidaTabuada;
+// }
+
+// ----------------------------------------------------------------------------
+
+// CODIGO COM LIMITADOR
+
+// function main() {
+//   let tabuada, limite;
+
+//   tabuada = Number(prompt("Qual a tabuada você deseja resolver?"));
+//   limite = Number(prompt("Qual o limite da tabuada?"));
+
+//   console.log(tabuadaLimite(tabuada, limite));
+//   alert(tabuadaLimite(tabuada, limite));
+// }
+
+// function tabuadaLimite(tabuadaUsuario, limiteUsuario){
+//   //escopo específico
+//   let contador = 0, resultado, saidaTabuada = "";
+
+//   while (contador <= limiteUsuario) {
+//       resultado = tabuadaUsuario * contador;
+//       if (contador === 0) {
+//           saidaTabuada = ` ${tabuadaUsuario} X ${contador} = ${resultado}`;
+//       } else {
+//           saidaTabuada = `${saidaTabuada} \n ${tabuadaUsuario} X ${contador} = ${resultado}`; //Template String
+//       }
+//       contador++;
+//   }
+//   return saidaTabuada;
+// }
+// main();
+
+// ----------------------------------------------------------------------------
+
+// USANDO PARAMETROS PARA CONVERSÕES
 
 function main() {
-  let tabuada;
+  let valorConverter, valorConvertido;
+  let opcaoMoeda;
+  let simboloMoeda;
 
-  tabuada = Number(prompt("Qual a tabuada você deseja resolver?"));
-   
-  console.log(Tabuada(tabuada));
-  alert(Tabuada(tabuada));    
+  opcaoMoeda = prompt(
+    "Olá, Qual conversão você deseja realizar hoje? 1 - Dólar 2 - Euro"
+  );
+
+  if (opcaoMoeda != 1 && opcaoMoeda != 2) {
+    alert("Opção inválida!");
+  } else {
+    valorConverter = prompt("Digite o valor que deseja converter: (em R$)");
+    if (opcaoMoeda == 1) {
+      simboloMoeda = "Dólar";
+      valorConvertido = RealDolar(valorConverter);
+    } else {
+      simboloMoeda = "Euro";
+      valorConvertido = RealEuro(valorConverter);
+    }
+    alert("O valor convertido para " + simboloMoeda + " resultou em " + valorConvertido);
+  }
 }
 
-// pegar os dados
-// faz tabuada
-// exibe a saída  
+function RealDolar(valorConverter) {
+  let valorConvertido;
+  const cotacao = 5.76;
+
+  valorConvertido = (valorConverter / cotacao).toFixed(2);
+
+  return "U$" + valorConvertido;
+}
+
+function RealEuro(valorConverter) {
+  let valorConvertido;
+  const cotacao = 6.52;
+
+  valorConvertido = (valorConverter / cotacao).toFixed(2);
+
+  return `€${valorConvertido}`;
+}
 
 main();
