@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Atividade 3"/>
+        <attribute name="authors" value="celso.pljunior"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-08 04:28:49 "/>
+        <attribute name="created" value="Y2Vsc28ucGxqdW5pb3I7U0FOMDcxNzQ3M1cxMS0xOzIwMjUtMDUtMDg7IjAzOjEwOjU4ICI7MzUyNw=="/>
+        <attribute name="edited" value="Y2Vsc28ucGxqdW5pb3I7U0FOMDcxNzQ3M1cxMS0xOzIwMjUtMDUtMDg7IjA0OjI4OjQ5ICI7MTszNjQ1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nomeVendedor" type="String" array="False" size=""/>
+            <declare name="salario, vendas, comissao, pagTotal" type="Integer" array="False" size=""/>
+            <output expression="&quot;Qual o nome do vendedor?&quot;" newline="True"/>
+            <input variable="nomeVendedor"/>
+            <output expression="&quot;Qual o sal&#225;rio fixo do vendedor?&quot;" newline="True"/>
+            <input variable="salario"/>
+            <output expression="&quot;Quanto foi o valor das vendas desse m&#234;s?&quot;" newline="True"/>
+            <input variable="vendas"/>
+            <if expression="vendas &gt;= 5000">
+                <then>
+                    <assign variable="comissao" expression="(vendas * 15) / 100"/>
+                    <assign variable="pagTotal" expression="comissao + salario"/>
+                </then>
+                <else>
+                    <if expression="vendas &gt;= 1500 &amp;&amp; vendas &lt;= 3000">
+                        <then>
+                            <assign variable="comissao" expression="(vendas * 10) / 100"/>
+                            <assign variable="pagTotal" expression="comissao + salario"/>
+                        </then>
+                        <else>
+                            <assign variable="comissao" expression="(vendas * 5) / 100"/>
+                            <assign variable="pagTotal" expression="comissao + salario"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Vendedor: &quot; &amp; nomeVendedor &amp; &quot; -- Valor das vendas: R$&quot; &amp; vendas &amp; &quot; -- Valor da comiss&#227;o: R$&quot; &amp; comissao &amp; &quot; -- Valor do sal&#225;rio: R$&quot; &amp; salario &amp; &quot; -- Pagamento: R$&quot; &amp; pagTotal" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
