@@ -17,7 +17,7 @@ function calculo(salarioVendedor, vendasVendedor, nomeVendedor) {
   let comissao
   let mensagem
 
-  if (vendasVendedor >= 5000) {
+  if (vendasVendedor >= 3001) {
     comissao = (vendasVendedor * 15) / 100;    
   } else if (vendasVendedor >= 1500 && vendasVendedor <= 3000){
     comissao = (vendasVendedor * 10) / 100;
