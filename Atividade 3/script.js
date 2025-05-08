@@ -1,28 +1,42 @@
 function main() {
-  let salario, vendas, comissao, pagTotal;
-  let nomeVendedor = prompt("Qual o nome do vendedor?");
-
+  let salario, vendas;
+  let nomeVendedor 
+  
+  nomeVendedor = prompt("Qual o nome do vendedor?");
   salario = Number(prompt("Qual o salário do vendedor?"));
   vendas = Number(prompt("Qual o valor das vendas?"));
+ 
+  calculo(salario, vendas, nomeVendedor);
 
-  if (vendas >= 5000) {
-    comissao = (vendas * 15) / 100;    
-  } else if (vendas >= 1500 && vendas <= 3000){
-    comissao = (vendas * 10) / 100;
+  alert(mensagem)
+
+  alert("Atividade 3 - Finalizada!!\nDesenvolvido por Celso Junior ©");
+}
+
+function calculo(salarioVendedor, vendasVendedor, nomeVendedor) {
+  let comissao
+  let mensagem
+
+  if (vendasVendedor >= 5000) {
+    comissao = (vendasVendedor * 15) / 100;    
+  } else if (vendasVendedor >= 1500 && vendasVendedor <= 3000){
+    comissao = (vendasVendedor * 10) / 100;
   }
   else{
-    comissao = (vendas * 5) / 100;
+    comissao = (vendasVendedor * 5) / 100;
   }
-  pagTotal = comissao + salario;
-  
-  alert(`
-  Nome: ${nomeVendedor}
-  Salário: R$ ${salario}
-  Vendas: R$ ${vendas}
-  Comissão: R$ ${comissao}
-  Salário Total: R$ ${pagTotal}
-  `);
-  alert("Atividade 3 - Finalizada!!\nDesenvolvido por Celso Junior ©");
+  pagTotal = comissao + salarioVendedor;
+
+  mensagem = alert(`
+    Nome: ${nomeVendedor}
+    Salário: R$ ${salarioVendedor}
+    Vendas: R$ ${vendasVendedor}
+    Comissão: R$ ${comissao}
+    Salário Total: R$ ${pagTotal}
+    `);
+
+  return mensagem
+
 }
 
 main();
