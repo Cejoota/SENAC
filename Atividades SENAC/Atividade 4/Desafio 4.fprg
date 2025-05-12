@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Desafio 4"/>
+        <attribute name="authors" value="celso.pljunior"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-12 02:24:54 "/>
+        <attribute name="created" value="Y2Vsc28ucGxqdW5pb3I7U0FOMDcxNzQ3M1cxMS0xOzIwMjUtMDUtMTI7IjAxOjQyOjQzICI7MzUxOQ=="/>
+        <attribute name="edited" value="Y2Vsc28ucGxqdW5pb3I7U0FOMDcxNzQ3M1cxMS0xOzIwMjUtMDUtMTI7IjAyOjI0OjU0ICI7MjszNjMx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="&#186;C, &#186;F" type="Real" array="False" size=""/>
+            <declare name="opcao" type="Integer" array="False" size=""/>
+            <output expression="&quot;Qual a convers&#227;o deseja realizar? 1 - Celsius/Fahrenheit ou 2 - Fahrenheit/Celsius&quot;" newline="True"/>
+            <input variable="opcao"/>
+            <if expression="opcao = 1">
+                <then>
+                    <output expression="&quot;Qual a temperatura em Celsius?&quot;" newline="True"/>
+                    <input variable="&#186;C"/>
+                    <assign variable="&#186;F" expression="&#186;C * 1.8 + 32"/>
+                    <output expression="&quot;A temperatura &#233; &quot; &amp; &#186;F &amp; &quot;&#186; Fahrenheit&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="opcao = 2">
+                        <then>
+                            <output expression="&quot;Qual a temperatura em Fahrenheit?&quot;" newline="True"/>
+                            <input variable="&#186;F"/>
+                            <assign variable="&#186;C" expression="(&#186;F - 32) * 5/9"/>
+                            <output expression="&quot;A temperatura &#233; &quot; &amp; &#186;C &amp; &quot;&#186; Celsius&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Op&#231;&#227;o Inv&#225;lida&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
