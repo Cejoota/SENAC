@@ -1,20 +1,26 @@
-
-
 function main() {
   let opcao;
+  let continuar = "sim";
 
-  opcao = Number(prompt("Qual a conversão que deseja realizar?\n1 - Celsius para Fahrenheit\n2 - Fahrenheit para Celsius"));
+  while (continuar == "sim") {
+    opcao = Number(
+      prompt(
+        "Qual a conversão que deseja realizar?\n1 - Celsius para Fahrenheit\n2 - Fahrenheit para Celsius"
+      )
+    );
 
-  if (opcao == 1) {
-    celsius();
-  } else if (opcao == 2) {
-    fahrenheit();
-  } else {
-    alert("Opção inválida!");
+    if (opcao == 1) {
+      celsius();
+    } else if (opcao == 2) {
+      fahrenheit();
+    } else {
+      alert("Opção inválida!");
+    }
+    continuar = prompt("Deseja calcular novamente? (sim/nao)");
   }
+
   alert("Desafio 4 - Finalizada!!\nDesenvolvido por Celso Junior ©");
 }
-
 
 function celsius() {
   let ºC, ºF;
@@ -37,4 +43,3 @@ function fahrenheit() {
 }
 
 main();
-
