@@ -6,7 +6,9 @@ function main(){
     carros = prompt("Digite o nome de 5 marcas de carros: ");
     mensagem += carros + "\n";
     }
-    alert(mensagem);
+    alert(` Segue as marcas de carros digitadas:\n${mensagem}`);	
+
+    alert("Projeto 7 - Finalizado!!\nDesenvolvido por Celso Junior ©");
 }
 
 main();
