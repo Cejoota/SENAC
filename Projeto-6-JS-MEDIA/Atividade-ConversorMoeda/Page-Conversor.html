@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de Moedas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style-conv.css" />
+    <script src="./conversor.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Conversor de Moedas</h1>
+      <div class="container__box">
+        <select class="select-box" name="moeda" id="moeda">
+        <option id="dolar" value="dolar"> R$ Real x Dolar &#36</option>
+        <option id="euro" value="euro"> R$ Real x Euro &#8364</option>
+        </select>
+        <input
+          class="text-box"
+          type="text"
+          id="valor"
+          placeholder="Digite o valor que deseja converter"
+        />
+        <input class="text-box__result" type="text" id="resultado" placeholder="O valor convertido será exibido aqui" readonly>
+        <button onclick="Conversor()">Converter</button>
+    </div>
+    <h2>Desenvolvido por Celso Junior ©</h2>
+    </div>
+  </body>
+</html>

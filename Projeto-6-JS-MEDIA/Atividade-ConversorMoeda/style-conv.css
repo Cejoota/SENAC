@@ -1,0 +1,83 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-bottom: 2px solid black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  width: 40rem;
+  background-color: #ccc;
+}
+
+.container__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.text-box {
+  width: 20rem;
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.text-box__result{
+  width: 15rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.select-box {
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+button {
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: bold;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+::placeholder {
+  text-align: center;
+}
+
+input {
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.87rem;
+}
+
+h2{
+  text-align: center;
+  font-size: 0.9rem;
+}
