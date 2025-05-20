@@ -13,7 +13,7 @@
       <input
         type="text"
         name="nome"
-        id="nome"
+        id="nomeAluno"
         placeholder="Digite o nome do aluno"
         class="form__element form__textbox"
       />
@@ -34,10 +34,14 @@
       <input type="number" class= "form__textbox" name="nota4" id="nota4" min="0" max="10" />
     </div>
       <input  class="form__element form__btn" type="button" id="button"  value="Calcular Media" onclick="CalcularMedia()" />
+      <p class="result-box__text">Resultado do aluno</p>
       <div id="result-box">
-          <input type="text" name="resultado" class="form__textbox" placeholder="Media" id="media">
-          <input type="text" name="media" class="form__textbox" placeholder="Resultado" id="resultado">
+          <input type="text" name="resultado" class="form__textbox media_resultado" placeholder="Media" id="media">
+          <input type="text" name="media" class="form__textbox media_resultado" placeholder="Resultado" id="resultado">
       </div>
+      <ul>
+        
+      </ul>
     </form>
   </body>
 </html>
