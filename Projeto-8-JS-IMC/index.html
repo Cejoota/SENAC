@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de IMC</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <svg width="160" height="40" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="40" height="40" rx="8" fill="#2d4059"/>
+            <text x="8" y="27" font-size="22" fill="#ffffff" font-family="Arial, sans-serif">💪</text>
+            <text x="50" y="28" font-size="22" fill="white" font-family="Arial, sans-serif" font-weight="bold">IMC Pro</text>
+        </svg>
+        <button id="dark-mode">🌙</button>
+    </header>
+    <main>
+        <div class="inputs">
+            <input type="text" id="peso" placeholder="Digite seu peso (kg)">
+            <input type="text" id="altura" placeholder="Digite sua altura (m)">
+            <button id="limpar">Limpar</button>
+            <button id="calcular">Calcular o IMC</button>
+        </div>
+        <div class="resultado">
+            <p>Resultado:</p>
+            <p id="resultadoIMC" class="resultado__imc"></p>
+            <p>Classificação:</p>
+            <p id="classificacao" class="classificacao"></p>
+            <p id="dicas" class="Dicas"></p>
+        </div>
+        <div id="grafico" class="grafico"></div>
+    </main>
+    <footer>
+        <p class="cjdev">Desenvolvido por Cejoota Dev &copy;</p>
+    </footer>
+</body>
+</html>
