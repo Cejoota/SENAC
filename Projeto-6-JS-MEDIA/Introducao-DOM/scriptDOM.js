@@ -71,4 +71,18 @@ function CalcularMedia() {
 
 // document.getElementsByTagName("form")[0].style.backgroundColor = "green";
 
+// Usando o querySelector para pegar a primeira correspondencia existente
+// Quando buscamos ID temos que colocar # e quando buscamos Class temos que colocar .
+
+// document.querySelector("#nomeAluno");
+// document.querySelector("p");
+// document.querySelector(".form__textbox");
+
+// Usando o querySelectorAll para pegar TODOS que atendam ao criterio. SEMPRE retorna um array.
+// Tambem temos que colocar # para ID e . para Class
+
+// document.querySelectorAll("#nomeAluno");
+// document.querySelectorAll("p");
+// document.querySelectorAll(".form__textbox");
+
 // }

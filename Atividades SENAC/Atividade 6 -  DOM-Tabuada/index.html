@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabuada com DOM</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Calculadora de Tabuada</h1>
+      </header>
+      <main>
+        <div class="forms">
+          <form class="forms__tabuada" action="#">
+            <div class="forms__container">
+              <input
+                type="number"
+                placeholder="Qual a tabuada?"
+                id="tabuada"
+                class="tabuada"
+              />
+              <input
+                type="number"
+                placeholder="Qual o limite inicial?"
+                id="limiteInit"
+                class="limiteInit"
+              />
+              <input
+                type="number"
+                placeholder="Qual o limite final?"
+                id="limiteFinal"
+                class="limiteFinal"
+              />
+              <button
+                class="btn__tabuada"
+                type="button"
+                onclick="calcularTabuada()"
+              >
+                Gerar Tabuada
+              </button>
+            </div>
+        </div>
+          </form>
+        </div>
+        <div class="area__resultado">
+          <h2>Área de Resultado</h2>
+          <table>
+            <thead>
+              <tr>
+                <th class="resultadoTabuada" colspan="5">TABUADA</th>
+              </tr>
+            </thead>
+            <tbody id="corpoTabela"></tbody>
+          </table>
+        </div>
+      </main>
+  </body>
+</html>
