@@ -114,3 +114,25 @@ darkBtn.addEventListener("click", () => {
     darkBtn.textContent = "🌜";
   }
 });
+
+const bonecoSVG = document.getElementById("boneco-svg");
+const alturaInput = document.getElementById("altura");
+
+alturaInput.addEventListener("input", () => {
+  const altura = parseFloat(alturaInput.value);
+
+  if (isNaN(altura) || altura <= 0) {
+    bonecoSVG.style.transform = "scaleY(0.9)";
+    return;
+  }
+
+  const minAltura = 1.2;
+  const maxAltura = 2.2;
+
+  let escala = (altura - minAltura) / (maxAltura - minAltura);
+  escala = Math.min(Math.max(escala, 0), 1);
+
+  const escalaFinal = 0.9 + escala * 0.4;
+
+  bonecoSVG.style.transform = `scaleY(${escalaFinal.toFixed(2)})`;
+});

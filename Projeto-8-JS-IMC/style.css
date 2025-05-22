@@ -33,6 +33,39 @@ main {
   min-height: 91.8vh;
 }
 
+.container-principal {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Alinha verticalmente */
+  justify-content: center;
+  gap: 40px; /* Espaço entre boneco e conteúdo */
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.boneco {
+  flex-shrink: 0;
+  width: 140px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: visible;
+}
+
+#boneco-svg {
+  transform-origin: bottom center;
+  transition: transform 0.3s ease;
+}
+
+.conteudo-direito {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 input {
   padding: 0.5rem;
   border: none;
@@ -71,6 +104,13 @@ input {
 
 .inputs input::placeholder {
   text-align: center;
+}
+
+.inputs,
+.result,
+#grafico {
+  width: 100%;
+  max-width: 400px;
 }
 
 button {
@@ -183,5 +223,20 @@ body.dark {
   header {
     flex-direction: column;
     gap: 10px;
+  }
+  .container-principal {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .boneco {
+    width: 100px;
+    height: 220px;
+  }
+
+  .inputs,
+  .result,
+  #grafico {
+    max-width: 100%;
   }
 }

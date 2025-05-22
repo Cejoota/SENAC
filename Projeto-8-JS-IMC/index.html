@@ -18,6 +18,32 @@
         <button id="dark-mode">🌙</button>
     </header>
     <main>
+        <div class="container-principal">
+            <div class="boneco">
+              <svg id="boneco-svg" width="120" height="300" viewBox="0 0 120 300" xmlns="http://www.w3.org/2000/svg" >
+                <!-- Cabeça -->
+                <circle cx="60" cy="50" r="40" fill="#FFD7B5" stroke="#E6A471" stroke-width="2" />
+                <!-- Olhos -->
+                <circle cx="45" cy="45" r="6" fill="#3E3E3E" />
+                <circle cx="75" cy="45" r="6" fill="#3E3E3E" />
+                <!-- Brilho olhos -->
+                <circle cx="43" cy="43" r="2" fill="white" />
+                <circle cx="73" cy="43" r="2" fill="white" />
+                <!-- Boca feliz -->
+                <path d="M40 70 Q60 90 80 70" stroke="#E94E1B" stroke-width="4" fill="none" stroke-linecap="round" />
+                <!-- Corpo -->
+                <rect x="30" y="90" width="60" height="130" fill="#5A8DEE" rx="20" ry="20" />
+                <!-- Braços -->
+                <rect x="5" y="90" width="25" height="90" fill="#5A8DEE" rx="15" ry="15" />
+                <rect x="90" y="90" width="25" height="90" fill="#5A8DEE" rx="15" ry="15" />
+                <!-- Pernas -->
+                <rect x="35" y="220" width="20" height="80" fill="#3D5B99" rx="15" ry="15" />
+                <rect x="65" y="220" width="20" height="80" fill="#3D5B99" rx="15" ry="15" />
+                <!-- Sombra abaixo -->
+                <ellipse cx="60" cy="305" rx="40" ry="12" fill="rgba(0,0,0,0.15)" />
+              </svg>
+            </div>
+            <div class="conteudo-direito">
         <div class="inputs">
             <input type="text" id="peso" placeholder="Digite seu peso (kg)">
             <input type="text" id="altura" placeholder="Digite sua altura (m)">
@@ -32,6 +58,7 @@
             <p id="dicas" class="dicas"></p>
         </div>
         <div id="grafico" class="grafico"></div>
+        </div>       
     </main>
     <footer>
         <p class="cjdev">Desenvolvido por Cejoota Dev &copy;</p>
