@@ -109,6 +109,14 @@ darkBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
 
   if (document.body.classList.contains("dark")) {
+    document.getElementsByClassName("title")[0].style.color = "white";
+    document.getElementsByClassName("text__IMC")[0].style.color = "white";  
+  } else {
+    document.getElementsByClassName("title")[0].style.color = "black";
+    document.getElementsByClassName("text__IMC")[0].style.color = "black";
+    }
+
+  if (document.body.classList.contains("dark")) {
     darkBtn.textContent = "🌞";
   } else {
     darkBtn.textContent = "🌜";

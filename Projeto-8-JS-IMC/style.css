@@ -29,8 +29,30 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   min-height: 91.8vh;
+  min-width: 400px;
+}
+.title{
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  width: 60rem;
+
+}
+
+.IMC {
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  width: 60rem;
+  gap: 4rem;
+  align-items: center;
 }
 
 .container-principal {
@@ -204,7 +226,7 @@ body.dark {
   --box-shadow: #ffffff0d;
 }
 
-@media (max-width: 500px) {
+@media ( max-width: 500px) {
   .inputs {
     flex-direction: column;
     width: 100%;
@@ -239,4 +261,18 @@ body.dark {
   #grafico {
     max-width: 100%;
   }
+
+  .IMC{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+  }
+
+  .text__IMC{
+    width: 100vw;
+    text-align: center;
+  }
+
 }
