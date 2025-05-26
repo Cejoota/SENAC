@@ -263,7 +263,7 @@ body.dark {
 
   .boneco {
     width: 100px;
-    height: 220px;
+    height: auto;
   }
 
   .inputs,
@@ -283,6 +283,7 @@ body.dark {
   .text__IMC{
     width: 100vw;
     text-align: center;
+    font-size: 14px;
   }
 
 }
