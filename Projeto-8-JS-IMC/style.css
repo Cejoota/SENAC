@@ -81,6 +81,16 @@ main {
   transition: transform 0.3s ease;
 }
 
+.result-box{
+  display: flex;
+  justify-content: center;
+}
+
+.class-box{
+  display: flex;
+  justify-content: center;
+}
+
 .conteudo-direito {
   flex: 1;
   display: flex;
