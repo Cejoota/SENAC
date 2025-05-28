@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Hamburguer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js"></script>
+  </head>
+  <body >
+    <header>
+        <nav class="desktop-container">
+            <a href="#home" class="active">Menu Hamburguer</a>           
+          <ul class="menu-desktop">
+            <li class="desktop-list"><a class="desktop-link" href="#news">News</a></li>
+            <li class="desktop-list"><a class="desktop-link" href="#contact">Contact</a></li>
+            <li class="desktop-list"><a class="desktop-link" href="#about">About</a></li>
+          </ul>
+        </nav>
+      <nav>
+        <div class="mobile-container">
+          <div class="topnav">
+            <a href="#home" class="active">Menu Hamburguer</a>           
+            <ul id="myLinks">
+              <li><a href="#news">News</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#about">About</a></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="toogleMenu()">
+              <i class="fa fa-bars icone"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main onclick="closeMenu()">
+        <span ></span>
+        <div>
+            <h3>Vertical Mobile Navbar</h3>
+            <p>
+              This example demonstrates how a navigation menu on a mobile/smart
+              phone could look like.
+            </p>
+            <p>
+              Click on the hamburger menu (three bars) in the top right corner,
+              to toggle the menu.
+            </p>
+          </div>
+    </main>
+  </body>
+</html>
