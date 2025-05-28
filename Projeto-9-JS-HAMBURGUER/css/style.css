@@ -82,7 +82,7 @@ header {
   text-decoration: none;
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1920px){
     .topnav{
         display: none;
     }
