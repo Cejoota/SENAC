@@ -257,9 +257,9 @@ body.dark {
     gap: 20px;
   }
 
-  footer{
-    width: 92vw;
-  }
+  /* footer{
+    width: 100%;
+  } */
 
   .boneco {
     width: 100px;
