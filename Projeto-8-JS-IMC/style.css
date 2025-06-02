@@ -257,9 +257,9 @@ body.dark {
     gap: 20px;
   }
 
-  /* footer{
-    width: 100%;
-  } */
+  footer{
+    width: 92vw;
+  }
 
   .boneco {
     width: 100px;
@@ -269,7 +269,7 @@ body.dark {
   .inputs,
   .result,
   #grafico, h1, .IMC {
-    max-width: 100vw;
+    max-width: 100%;
   }
 
   .IMC{
@@ -281,7 +281,7 @@ body.dark {
   }
 
   .text__IMC{
-    width: 100vw;
+    width: 99vw;
     text-align: center;
     font-size: 14px;
   }
