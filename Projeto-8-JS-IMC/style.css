@@ -23,6 +23,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100vw;
 }
 
 main {
@@ -275,6 +276,15 @@ body.dark {
   .result,
   #grafico, h1, .IMC {
     max-width: 100%;
+  }
+
+  .title, .text__IMC{
+    width: 100vw;
+    font-size: 2rem;
+  }
+
+  img{
+    width: 100vw;
   }
 
   .IMC{
