@@ -237,6 +237,10 @@ body.dark {
 }
 
 @media ( max-width: 500px) {
+  *{
+    box-sizing: border-box;
+  }
+  
   .inputs {
     flex-direction: column;
     width: 100%;
