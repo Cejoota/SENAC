@@ -255,6 +255,7 @@ body.dark {
   header {
     flex-direction: column;
     gap: 10px;
+    width: 100vw;
   }
   .container-principal {
     flex-direction: column;
@@ -262,7 +263,7 @@ body.dark {
   }
 
   footer{
-    width: 92vw;
+    width: 100vw;
   }
 
   .boneco {
