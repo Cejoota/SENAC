@@ -189,9 +189,9 @@ footer {
   display: flex;
   justify-content: center;
   padding: 0.3rem 1rem;
-  position: fixed;
+  position: relative;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
   text-align: center;
 }
 
@@ -258,7 +258,7 @@ body.dark {
   }
 
   footer{
-    width: 100vw;
+    width: 92vw;
   }
 
   .boneco {
