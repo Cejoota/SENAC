@@ -47,9 +47,9 @@ main {
   font-weight: bold;
   text-align: center;
   box-sizing: border-box;
-  width: 60vw;
-  gap: 4rem;
+  gap: 1rem;
   align-items: center;
+  max-width: 60vw;
 }
 
 .container-principal {
@@ -279,6 +279,10 @@ body.dark footer p {
     height: auto;
   }
 
+  #boneco-svg{
+transform-origin: 0;
+  }
+
   .title,
   .text__IMC {
     width: 100vw;
@@ -306,5 +310,13 @@ body.dark footer p {
     text-align: center;
     font-size: 14px;
     padding-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .IMC{
+    max-width: none;
+    font-size: 1.15rem;
   }
 }
