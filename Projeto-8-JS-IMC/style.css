@@ -31,16 +31,14 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  min-height: 92.8vh;
+  min-height: 91.7vh;
   min-width: 400px;
 }
 .title{
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 20px;
   box-sizing: border-box;
-  /* width: 60rem; */
 
 }
 
@@ -49,9 +47,8 @@ main {
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 20px;
   box-sizing: border-box;
-  width: 60rem;
+  width: 60vw;
   gap: 4rem;
   align-items: center;
 }
@@ -59,12 +56,11 @@ main {
 .container-principal {
   display: flex;
   flex-direction: row;
-  align-items: center; /* Alinha verticalmente */
+  align-items: center;
   justify-content: center;
-  gap: 40px; /* Espaço entre boneco e conteúdo */
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
+  gap: 40px;
+  /* max-width: 900px;
+  margin: 0 auto; */
 }
 
 .boneco {
@@ -140,7 +136,6 @@ input {
 }
 
 .inputs,
-.result,
 #grafico {
   width: 100%;
   max-width: 400px;
@@ -165,7 +160,6 @@ button:hover {
 }
 
 .result {
-  margin-top: 20px;
   text-align: center;
   font-size: 1.2rem;
   color: var(--resultado);
@@ -173,7 +167,7 @@ button:hover {
   padding: 15px;
   border-radius: 12px;
   box-shadow: 0 4px 10px var(--box-shadow);
-  width: 100%;
+  width: 100vw;
   max-width: 400px;
 }
 
@@ -219,7 +213,6 @@ footer {
   cursor: pointer;
   color: white;
   transition: transform 0.2s ease;
-  /* margin-right: 2vh; */
 }
 
 #dark-mode:hover {
@@ -243,6 +236,7 @@ body.dark {
 .container-box{
   width: 100vw;
 }
+
 
 @media ( max-width: 500px) {
   *{
