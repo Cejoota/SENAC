@@ -232,6 +232,10 @@ body.dark {
   --box-shadow: #ffffff0d;
 }
 
+body.dark footer p {
+    color: white;
+}
+
 @media (max-width: 500px) {
   * {
     box-sizing: border-box;
