@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const classificacao = document.getElementById("classificacao");
   const dicas = document.getElementById("dicas");
   const grafico = document.getElementById("grafico");
+  const bonecoSVG = document.getElementById("boneco-svg");
 
   const emojis = {
     baixo: "😟",
@@ -99,48 +100,47 @@ document.addEventListener("DOMContentLoaded", () => {
     classificacao.textContent = "";
     dicas.textContent = "";
     grafico.innerHTML = "";
+    bonecoSVG.style.transform = "scaleY(0.9)";
   }
 
   limparButton.addEventListener("click", limparCampos);
-});
 
-const darkBtn = document.getElementById("dark-mode");
-darkBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
+  // 🌙 Modo escuro
+  const darkBtn = document.getElementById("dark-mode");
+  darkBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
 
-  if (document.body.classList.contains("dark")) {
-    document.getElementsByClassName("title")[0].style.color = "white";
-    document.getElementsByClassName("text__IMC")[0].style.color = "white";  
-  } else {
-    document.getElementsByClassName("title")[0].style.color = "black";
-    document.getElementsByClassName("text__IMC")[0].style.color = "black";
+    const cor = document.body.classList.contains("dark") ? "white" : "black";
+    document.querySelector(".title").style.color = cor;
+    document.querySelector(".text__IMC").style.color = cor;
+    darkBtn.textContent = document.body.classList.contains("dark") ? "🌞" : "🌜";
+  });
+
+  // 🧍‍♂️ Máscara + redimensionamento do boneco
+  alturaInput.addEventListener("input", () => {
+    let valor = alturaInput.value.replace(/\D/g, ""); // só números
+
+    if (valor.length > 3) valor = valor.slice(0, 3); // máx 3 dígitos
+
+    if (valor.length >= 2) {
+      alturaInput.value = valor[0] + "." + valor.slice(1);
+    } else {
+      alturaInput.value = valor;
     }
 
-  if (document.body.classList.contains("dark")) {
-    darkBtn.textContent = "🌞";
-  } else {
-    darkBtn.textContent = "🌜";
-  }
-});
+    const altura = parseFloat(alturaInput.value);
 
-const bonecoSVG = document.getElementById("boneco-svg");
-const alturaInput = document.getElementById("altura");
+    if (isNaN(altura) || altura <= 0) {
+      bonecoSVG.style.transform = "scaleY(0.9)";
+      return;
+    }
 
-alturaInput.addEventListener("input", () => {
-  const altura = parseFloat(alturaInput.value);
+    const minAltura = 1.2;
+    const maxAltura = 2.2;
+    let escala = (altura - minAltura) / (maxAltura - minAltura);
+    escala = Math.min(Math.max(escala, 0), 1);
+    const escalaFinal = 0.9 + escala * 0.4;
 
-  if (isNaN(altura) || altura <= 0) {
-    bonecoSVG.style.transform = "scaleY(0.9)";
-    return;
-  }
-
-  const minAltura = 1.2;
-  const maxAltura = 2.2;
-
-  let escala = (altura - minAltura) / (maxAltura - minAltura);
-  escala = Math.min(Math.max(escala, 0), 1);
-
-  const escalaFinal = 0.9 + escala * 0.4;
-
-  bonecoSVG.style.transform = `scaleY(${escalaFinal.toFixed(2)})`;
+    bonecoSVG.style.transform = `scaleY(${escalaFinal.toFixed(2)})`;
+  });
 });
