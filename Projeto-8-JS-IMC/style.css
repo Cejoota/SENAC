@@ -16,8 +16,6 @@ body {
   background-color: var(--background);
   transition: background 0.3s ease, color 0.3s ease;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  width: 100vw;
-  box-sizing: border-box;
 }
 
 header {
@@ -25,7 +23,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 main {
@@ -33,7 +31,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  min-height: 100vh;
+  min-height: 92.8vh;
   min-width: 400px;
 }
 .title{
@@ -191,11 +189,9 @@ footer {
   color: var(--background);
   display: flex;
   justify-content: center;
-  padding: 0.3rem 1rem;
-  position: relative;
-  bottom: 0;
-  /* width: 100vw; */
   text-align: center;
+  padding: 0.3rem 1rem;
+  /* width: 100vw; */
 }
 
 #grafico {
@@ -223,11 +219,16 @@ footer {
   cursor: pointer;
   color: white;
   transition: transform 0.2s ease;
+  /* margin-right: 2vh; */
 }
 
 #dark-mode:hover {
   transform: scale(1.1);
 }
+
+/* .btn-space {
+  padding-right: 2vh;
+} */
 
 body.dark {
   --background: #1e1e2f;
@@ -310,5 +311,6 @@ body.dark {
     text-align: center;
     font-size: 14px;
   }
+
 
 }
