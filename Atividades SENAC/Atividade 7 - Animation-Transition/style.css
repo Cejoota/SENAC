@@ -80,11 +80,30 @@
       }
 }
 
-.container-js{
+.container-js, .container-hover{
     display: flex;
     align-items: center;
 }
 
+.robo-js {
+    animation: up 0.8s ease forwards;
+  }
+
+  @keyframes up {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0px, -30px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  .robo-hover:hover {
+    animation: up 0.8s ease forwards;
+  }
 
 
 
