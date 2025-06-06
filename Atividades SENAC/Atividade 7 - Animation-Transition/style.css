@@ -80,6 +80,11 @@
       }
 }
 
+.container-js{
+    display: flex;
+    align-items: center;
+}
+
 
 
 
