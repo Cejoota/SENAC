@@ -1,0 +1,85 @@
+.container-box{
+    display: flex;
+    align-items: center;
+}
+
+.robo{
+    align-items: center;
+    width: 100px;
+}
+
+.robo-battle{
+    animation: battle 1s ease-in-out infinite;
+}
+
+@keyframes battle {
+    0%{
+        transform: translate(0px, 0px);
+    }
+    50%{
+        transform: translate(0px, -10px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+
+.robo-atk{
+    animation: atk 1.7s ease-in-out infinite;
+}
+
+@keyframes atk {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+      40% {
+        transform: translate(100px, 0) rotate(0deg); /* avança normalmente */
+      }
+      80% {
+        transform: translate(130px, 0px) rotate(10deg); /* cabeçada inclinada */
+      }
+      90% {
+        transform: translate(100px, 0) rotate(0deg); /* volta da cabeçada */
+      }
+      100% {
+        transform: translate(0, 0) rotate(0deg); /* retorna à posição inicial */
+      }
+}
+
+.robo-def{
+    animation: def 1s ease-in-out infinite;
+}
+
+@keyframes def {
+    0% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(-10px, 0); 
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+}
+
+.robo-death{
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+    animation: death 1.5s ease-in-out infinite;
+}
+
+@keyframes death {
+    0% {
+        transform: rotate(0);
+      }
+      50% {
+        transform: rotate(-90deg);
+      }
+      100% {
+        transform: rotate(-90deg);
+      }
+}
+
+
+
+
