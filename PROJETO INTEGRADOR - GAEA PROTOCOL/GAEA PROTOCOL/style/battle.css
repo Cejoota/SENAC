@@ -1,0 +1,337 @@
+body {
+  margin: 0;
+  font-family: "Arial";
+  background: url("../img/background/imagem.png") no-repeat fixed;
+  background-size: 1920px;
+  background-position-y: -58vh;
+  min-width: 1800px;
+  min-height: 900px;
+}
+
+.game-container {
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #444;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.life-cash{
+  gap: 15px;
+  display: flex;
+  align-items: center
+}
+
+.box-itens{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.363);
+  padding: 0 10px;
+  border-radius: 15px;
+}
+
+.vida{
+  width: 30px;
+}
+
+.picareta{
+  padding-top: 10px;
+  width: 30px;
+}
+
+.algas{
+  width: 29px;
+}
+
+.map{
+  width: 30px;
+}
+
+.use-action{
+  cursor: pointer;
+}
+
+.use-action:hover{
+  transform: scale(1.1);
+}
+
+/* MECHAS */
+
+.battlefield {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.mecha {
+  height: 200px;
+}
+
+.p1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.p2 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 17%;
+}
+
+progress {
+  display: flex;
+}
+
+/* MECHAS */
+
+.hands {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.table,
+.card1,
+.card2 {
+  height: 190px;
+  cursor: pointer;
+}
+
+
+.card2{
+  height: 196px;
+}
+
+.card2:hover{
+  transform: scale(1.1);
+}
+
+.descarte:hover{
+  transform: scale(1.1);
+}
+
+.mao1:hover,
+.mao2:hover,
+.mao3:hover,
+.mao4:hover {
+  transform: translateY(-30px);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 110px 20px 0 20px;
+}
+
+/* LUTAS */
+
+.player {
+  animation: atk 1.7s ease-in-out;
+}
+
+@keyframes atk {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  20% {
+    transform: translate(30px, 0) rotate(0deg); /* avança normalmente */
+  }
+  30% {
+    transform: translate(80px, 0px) rotate(15deg); /* cabeçada inclinada */
+  }
+  45% {
+    transform: translate(30px, 0px) rotate(0deg); /* cabeçada inclinada */
+  }
+  50% {
+    transform: translate(20px, 0) rotate(0deg); /* volta da cabeçada */
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg); /* retorna à posição inicial */
+  }
+}
+
+.enemy-attacker {
+  animation: enemy-atk 1.7s ease-in-out;
+}
+
+@keyframes enemy-atk {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  20% {
+    transform: translate(-30px, 0) rotate(0deg); /* avança para a esquerda */
+  }
+  30% {
+    transform: translate(-80px, 0px) rotate(-15deg); /* cabeçada inclinada */
+  }
+  45% {
+    transform: translate(-30px, 0px) rotate(0deg); /* recuo da cabeçada */
+  }
+  50% {
+    transform: translate(-20px, 0) rotate(0deg); /* volta da cabeçada */
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg); /* retorna à posição inicial */
+  }
+}
+
+/* Adicione esta transição para que as cartas da mão se movam suavemente */
+.hand-table .card1 {
+  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Esta é a nova classe que o JavaScript vai adicionar à carta clicada.
+  Ela posiciona a carta no centro da tela.
+*/
+.card-played {
+    position: fixed !important; /* Usa !important para sobrepor outros estilos de posição */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2); /* Centraliza e aumenta um pouco */
+    z-index: 100; /* Garante que a carta fique na frente de tudo */
+    pointer-events: none; /* Impede que seja clicada novamente no meio da tela */
+}
+
+/* Estilo para o texto de HP abaixo das barras de vida */
+.hp-text {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 2px black; /* Sombra para melhorar a leitura */
+  font-family: 'Arial', sans-serif;
+  font-size: 1em;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Estilos para a tela de recompensa funcionar como um overlay */
+#rewards-screen {
+    position: fixed; /* Fica por cima de todo o conteúdo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escurecido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Garante que fique na frente */
+}
+
+/* O painel principal dentro do overlay (código que você já tinha) */
+.main-panel {
+    background-color: rgba(30, 30, 30, 0.85);
+    border: 2px solid #555;
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    /* Adiciona animação de fade-in */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.map{
+  width: 30px;
+}
+
+.pos-picareta{
+  padding-top: 40px;
+  width: 180px;
+}
+
+.pos-algas{
+  width: 150px;
+  padding-bottom: 25px;
+}
+
+
+.main-panel {
+    background-color: rgba(30, 30, 30, 0.85);
+    border: 2px solid #555;
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 40px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.recompensas-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.recompensas-option {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, filter 0.2s;
+    text-align: center;
+}
+
+.recompensas-option:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.recompensas-option img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* COMPRAS DE CARTAS */
+
+/* Animação para a carta que é comprada */
+@keyframes draw-animation {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.card-drawn {
+  animation: draw-animation 0.5s ease-out;
+}
+
+/* Animação para a carta Impacto Cinético */
+@keyframes push-back-anim {
+  50% {
+    transform: translateX(50px) scaleX(1);
+  }
+  100% {
+    transform: scaleX(1); /* Retorna à posição original */
+  }
+}
+
+.pushed-back {
+    transform-origin: center; 
+    animation: push-back-anim 0.5s ease-out;
+}
