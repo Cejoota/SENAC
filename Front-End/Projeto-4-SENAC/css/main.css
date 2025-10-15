@@ -6,13 +6,11 @@
 }
 
 
-
 /* HEADER */
 
 .header{
     background-color: var(--cor-primaria);
-    height: 20vh;
-    width: 100vw;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,13 +32,13 @@
 /* MAIN */
 
 main{
-    height: 60vh;
+    height: 79vh;
     display: flex;
     align-items: center;
     background-image: url(../images/pizzaBackground.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 350px 0;
+    /* background-position: 350px 0; */
 }
 
 .form__title{
@@ -105,8 +103,6 @@ main{
     align-items: center;
     gap: 194px;
     background-color: var(--cor-primaria);
-    width: 100vw;
-    height: 20vh;
 }
 
 .footer__address{
@@ -114,7 +110,7 @@ main{
     justify-content: center;
     align-items: center;
     font-weight: 600;
-    margin-left: 40px;
+    padding-left: 40px;
     line-height: 20px;
 }
 
