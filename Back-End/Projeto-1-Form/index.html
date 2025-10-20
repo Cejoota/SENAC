@@ -5,13 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário Back-End</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <h1>Desenvolvedor Back-End - 02</h1>
     <form action="cadastrarAction.php" method="get">
-        <input type="submit" value="Cadastrar Cliente">
-        
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome">
+        <label for="cpf">CPF</label>
+        <input type="text" name="cpf" id="cpf">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email">
+        <label for="endereco">Endereço</label>
+        <input type="text" name="endereco" id="endereco">
+        <label for="cidade">Cidade</label>
+        <input type="text" name="cidade" id="cidade">
+        <label for="telefone">Telefone</label>
+        <input type="tel" name="telefone" id="telefone">
+        <label for="celwhats">Celular | Whatsapp</label>
+        <input type="tel" name="celwhats" id="celwhats">
+        <label for="interesse">Interesse</label>
+        <input type="password" name="interesse" id="interesse">
+        <input class="botao" type="submit" value="Cadastrar Cliente">
     </form>
 
 </body>

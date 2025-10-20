@@ -1,0 +1,19 @@
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 5px;
+    margin-left: 5px;
+}
+
+.botao{
+    background-color: blue;
+    color: white;
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
