@@ -65,3 +65,29 @@ nav a:hover{
 .botao:hover{
     background-color: #ffd740;
 }
+
+.servicos{
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.servicos h2{
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card{
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 280px;
+}
+
