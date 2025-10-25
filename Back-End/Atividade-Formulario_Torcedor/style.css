@@ -1,137 +1,327 @@
-/* ===== Estilo inspirado no site de sócio-torcedor, com paleta da CBF ===== */
- 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
- 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Paleta CBF:
+   Azul: #002776
+   Verde: #009739
+   Amarelo: #FFCC29
+   Branco: #FFFFFF
+*/
+
+:root {
+    --cbf-azul: #002776;
+    --cbf-verde: #009739;
+    --cbf-amarelo: #FFCC29;
+    --cbf-fundo: #f0f0f5; /* Fundo mais suave */
+    --cbf-sombra: rgba(0, 0, 0, 0.08);
+    --input-invalido: #ff4d4d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f2f2f2;
-  color: #002776; /* Azul CBF */
-  margin: 0;
-  padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--cbf-fundo);
+    color: var(--cbf-azul);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
- 
-/* ===== Cabeçalho ===== */
+
+/* -------------------------------------------------------------------------- */
+/* Cabeçalho                                  */
+/* -------------------------------------------------------------------------- */
 header {
-  background-color: #002776; /* Azul CBF */
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-  position: relative;
+    background-color: var(--cbf-azul);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem 2rem;
+    position: relative;
+    box-shadow: 0 4px 10px var(--cbf-sombra);
 }
- 
-header img {
-  width: 80px;
-  /* position: absolute; */
-  left: 40px;
-  top: 50%;
-  transform: translateY(-50%);
+
+.logo {
+    width: 70px; 
+    height: auto;
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4)); 
 }
- 
+
 header h1 {
-  font-size: 1.8rem;
-  margin: 0;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
- 
-/* ===== Formulário ===== */
+
+header p {
+    font-weight: 300;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+main {
+    padding: 2rem 1rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Formulário                                 */
+/* -------------------------------------------------------------------------- */
 fieldset {
-  max-width: 600px;
-  margin: 3rem auto;
-  background: white;
-  border: 3px solid #009739; /* Verde CBF */
-  border-radius: 12px;
-  padding: 2rem 3rem;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    max-width: 650px;
+    margin: 0 auto;
+    background: white;
+    border: none; 
+    border-radius: 15px;
+    padding: 3rem 4rem;
+    box-shadow: 0 10px 30px var(--cbf-sombra); 
 }
- 
+
 legend {
-  background-color: #ffcc29; /* Amarelo CBF */
-  color: #002776;
-  font-weight: 700;
-  font-size: 1.2rem;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  text-transform: uppercase;
-  text-align: center;
+    background-color: var(--cbf-amarelo);
+    color: var(--cbf-azul);
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: -4rem auto 2rem; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: table; 
 }
- 
-label {
-  display: block;
-  margin-top: 1.2rem;
-  font-weight: 700;
+
+/* Labels de campos de texto/select */
+label:not(.radio-option label, .checkbox-option label) {
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    font-size: 1.05rem;
 }
- 
+
 input[type="text"],
-input[type="email"],
-input[type="password"],
 select {
-  width: 100%;
-  padding: 0.8rem;
-  margin-top: 0.3rem;
-  border-radius: 8px;
-  border: 2px solid #ccc;
-  transition: all 0.3s ease;
-  font-size: 1rem;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1rem;
+    color: #333;
+}
+
+input[type="text"]:focus,
+select:focus {
+    outline: none;
+    border-color: black;
+}
+
+/* Validação de Inputs */
+.input-name:focus, .input-cpf:focus {
+    border-color: black; 
+}
+
+.input-name:invalid:not(:placeholder-shown), 
+.input-cpf:invalid:not(:placeholder-shown),
+select:invalid:not([value=""]) {
+    border-color: var(--input-invalido);
+}
+
+.input-name:valid, 
+.input-cpf:valid,
+.input-time:valid {
+    border-color: var(--cbf-verde);
 }
 
 .input-name:invalid, .input-cpf:invalid {
-  border-color: #ff4d4d; /* Vermelho para inválido */
+    border-color: var(--input-invalido); 
 }
 
-.input-name:valid, .input-cpf:valid {
-  border-color: #009739; /* Verde CBF */
-}
- 
-/*input:focus,
-select:focus {
-  border-color: #009739;
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 151, 57, 0.5);
-}*/
 
-input:invalid {
-  border-color: #ff4d4d; /* Vermelho para inválido */
+/* -------------------------------------------------------------------------- */
+/* Radio Buttons e Checkboxes (Customizados)             */
+/* -------------------------------------------------------------------------- */
+
+.frequencia {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 0.8rem 1.5rem;
+    padding: 0.5rem 0;
 }
- 
-/* ===== Botões ===== */
-input[type="submit"],
-input[type="reset"] {
-  background-color: #002776;
-  color: white;
-  border: none;
-  padding: 0.9rem 1.8rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  margin-top: 1.5rem;
-  margin-right: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
+
+.checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 2rem;
 }
- 
-input[type="submit"]:hover {
-  background-color: #009739; /* Verde CBF */
+
+.radio-option, .checkbox-option {
+    /* Não é mais necessário, o label interno fará o controle */
+    cursor: pointer;
 }
- 
-input[type="reset"]:hover {
-  background-color: #ffcc29; /* Amarelo CBF */
-  color: #002776;
+
+/* Esconder os inputs nativos */
+.frequencia input[type="radio"],
+.checkboxes input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
- 
-/* ===== Rodapé ===== */
+
+/* Garantir o alinhamento vertical no LABEL */
+.radio-option label, .checkbox-option label {
+    display: flex;
+    align-items: center; /* ALINHA O BOX (::before) COM O TEXTO */
+    cursor: pointer;
+    font-weight: 400;
+    margin: 0;
+}
+
+
+/* Criar o indicador visual para Radio */
+.radio-option label::before {
+    content: '';
+    display: block; /* Essencial para controle total de dimensões e line-height */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--cbf-azul);
+    margin-right: 10px; /* Separar o box do texto */
+    transition: all 0.2s ease;
+    background-color: white;
+    flex-shrink: 0; /* Impede que o círculo diminua */
+}
+
+/* Criar o indicador visual para Checkbox */
+.checkbox-option label::before {
+    content: '';
+    display: block; /* Essencial para controle total de dimensões e line-height */
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 2px solid var(--cbf-azul);
+    margin-right: 10px; /* Separar o box do texto */
+    transition: all 0.2s ease;
+    background-color: white;
+    flex-shrink: 0; /* Impede que o quadrado diminua */
+}
+
+/* Estado 'checked' para Radio */
+.radio-option input[type="radio"]:checked + label::before {
+    background-color: var(--cbf-verde);
+    border-color: var(--cbf-verde);
+    box-shadow: 0 0 0 3px rgba(0, 151, 57, 0.2);
+}
+
+/* Estado 'checked' para Checkbox */
+.checkbox-option input[type="checkbox"]:checked + label::before {
+    background-color: var(--cbf-verde);
+    border-color: var(--cbf-verde);
+    content: '✓'; 
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 20px; /* IGUAL à altura (20px) para centralizar o '✓' */
+    text-align: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Botões                                   */
+/* -------------------------------------------------------------------------- */
+.form-actions {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn-submit,
+.btn-reset {
+    flex-grow: 1; 
+    border: none;
+    padding: 1rem 1.8rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn-submit {
+    background-color: var(--cbf-azul);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 39, 118, 0.3);
+}
+
+.btn-submit:hover {
+    background-color: var(--cbf-verde); 
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 151, 57, 0.4);
+}
+
+.btn-reset {
+    background-color: #e0e0e0;
+    color: #555;
+}
+
+.btn-reset:hover {
+    background-color: var(--cbf-amarelo); 
+    color: var(--cbf-azul);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Rodapé                                   */
+/* -------------------------------------------------------------------------- */
 footer {
-  background-color: #002776;
-  color: white;
-  text-align: center;
-  padding: 1.15rem 0;
-  margin-top: 4rem;
+    background-color: var(--cbf-azul);
+    color: white;
+    text-align: center;
+    padding: 1.2rem 0;
+    margin-top: 4rem;
+    font-size: 0.9rem;
 }
- 
-footer p {
-  margin: 0;
-  font-size: 0.9rem;
+
+footer a {
+    color: var(--cbf-amarelo); 
+    text-decoration: none;
+    font-weight: 700;
 }
- 
-a {
-  color: #ffcc29; /* Amarelo CBF */
-  text-decoration: none;
+
+footer a:hover {
+    text-decoration: underline;
 }
- 
+
+/* -------------------------------------------------------------------------- */
+/* Responsividade                               */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+    fieldset {
+        padding: 2rem;
+        margin: 1rem auto;
+    }
+
+    legend {
+        font-size: 1.1rem;
+        padding: 0.5rem 1rem;
+        margin: -3rem auto 1.5rem;
+    }
+
+    .frequencia {
+        grid-template-columns: 1fr; 
+    }
+
+    .form-actions {
+        flex-direction: column; 
+        gap: 0.8rem;
+    }
+
+    .btn-submit, .btn-reset {
+        width: 100%;
+    }
+}
