@@ -121,7 +121,7 @@ footer {
   background-color: #002776;
   color: white;
   text-align: center;
-  padding: 1.2rem 0;
+  padding: 1.15rem 0;
   margin-top: 4rem;
 }
  
@@ -130,4 +130,8 @@ footer p {
   font-size: 0.9rem;
 }
  
+a {
+  color: #ffcc29; /* Amarelo CBF */
+  text-decoration: none;
+}
  
