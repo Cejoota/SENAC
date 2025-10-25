@@ -72,13 +72,21 @@ select {
   transition: all 0.3s ease;
   font-size: 1rem;
 }
- 
-input:focus,
-select:focus {
+
+.input-name:invalid, .input-cpf:invalid {
+  border-color: #ff4d4d; /* Vermelho para inválido */
+}
+
+.input-name:valid, .input-cpf:valid {
   border-color: #009739; /* Verde CBF */
+}
+ 
+/*input:focus,
+select:focus {
+  border-color: #009739;
   outline: none;
   box-shadow: 0 0 5px rgba(0, 151, 57, 0.5);
-}
+}*/
 
 input:invalid {
   border-color: #ff4d4d; /* Vermelho para inválido */
